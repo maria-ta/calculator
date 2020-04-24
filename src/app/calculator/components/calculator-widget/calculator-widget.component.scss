@@ -1,0 +1,61 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // TODO: to be themed
+  background-color: aquamarine;
+}
+
+.widget {
+  width: 352px;
+  // TODO: to be themed
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.widget__input {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.widget__buttons-area {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.widget__button {
+
+  flex-grow: 1;
+  height: 36px;
+
+  &:not([color="accent"]):not([color="primary"]):not([color="warn"]) {
+    // TODO: define a variable
+    color: gray;
+  }
+
+  &[color="warn"], &[color="primary"] {
+    font-weight: bolder;
+  }
+
+  &[color="primary"] {
+    font-size: 1.25em;
+  }
+
+  mat-icon {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+}
