@@ -27,9 +27,14 @@
   font-size: 1.5rem;
 }
 
-.widget__buttons-area {
+//.widget__buttons-area {
+//  display: flex;
+//  flex-flow: row wrap;
+//}
+
+.widget__buttons-row {
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
 }
 
 .widget__button {
@@ -37,9 +42,13 @@
   flex-grow: 1;
   height: 36px;
 
-  &:not([color="accent"]):not([color="primary"]):not([color="warn"]) {
+  &[hidden] {
+    display: none;
+  }
+
+  &:not([color="accent"]):not([color="primary"]):not([color="warn"]):not(disabled) {
     // TODO: define a variable
-    color: gray;
+    color: grey;
   }
 
   &[color="warn"], &[color="primary"] {
